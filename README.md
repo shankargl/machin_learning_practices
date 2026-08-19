@@ -37,9 +37,9 @@ Machine-Learning-Journey/
 ## 📈 Progress
 
 * ✅ Python
-* 🔄 NumPy
-* 🔄 Pandas
-* 🔄 Mathematics
+* ✅ NumPy
+* ✅ Pandas
+* ✅ Mathematics
 * ⏳ Machine Learning
 * ⏳ Deep Learning
 * ⏳ Generative AI
