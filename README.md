@@ -40,7 +40,7 @@ Machine-Learning-Journey/
 * ✅ NumPy
 * ✅ Pandas
 * ✅ Mathematics
-* ⏳ Machine Learning
+* ✅ Machine Learning
 * ⏳ Deep Learning
 * ⏳ Generative AI
 
