@@ -1,0 +1,1642 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shankar G L | AI & Software Developer</title>
+
+    <meta name="description"
+        content="Portfolio of Shankar G L - Information Science Engineering student, DSA enthusiast and AI/ML learner.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #020617;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        section {
+            padding: 100px 8%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            height: 70px;
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 8%;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            z-index: 1000;
+
+            background: rgba(2, 6, 23, 0.92);
+            backdrop-filter: blur(10px);
+
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+
+        /* ================= HOME ================= */
+
+        #home {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            padding-top: 120px;
+        }
+
+        .home-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 70px;
+        }
+
+        .home-content {
+            max-width: 700px;
+        }
+
+        .hello {
+            color: #38bdf8;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .home-content h1 {
+            font-size: 65px;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .home-content h1 span {
+            color: #38bdf8;
+        }
+
+        .home-content h2 {
+            font-size: 27px;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        .home-content p {
+            color: #94a3b8;
+            font-size: 17px;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+
+        /* ================= BUTTONS ================= */
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 13px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .primary-btn {
+            background: #38bdf8;
+            color: #020617;
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-3px);
+            background: #0ea5e9;
+        }
+
+        .secondary-btn {
+            color: #38bdf8;
+            border: 2px solid #38bdf8;
+        }
+
+        .secondary-btn:hover {
+            background: #38bdf8;
+            color: #020617;
+            transform: translateY(-3px);
+        }
+
+
+        /* ================= PROFILE ================= */
+
+        .profile-container {
+            width: 350px;
+            height: 350px;
+
+            flex-shrink: 0;
+
+            border-radius: 50%;
+            border: 4px solid #38bdf8;
+
+            overflow: hidden;
+
+            box-shadow: 0 0 60px rgba(56, 189, 248, 0.25);
+        }
+
+        .profile-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        /* ================= SOCIAL ================= */
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            padding: 9px 16px;
+
+            border: 1px solid #334155;
+            border-radius: 7px;
+
+            color: #cbd5e1;
+
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            border-color: #38bdf8;
+            color: #38bdf8;
+            transform: translateY(-3px);
+        }
+
+
+        /* ================= SECTION TITLE ================= */
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .section-title h2 span {
+            color: #38bdf8;
+        }
+
+        .section-title p {
+            color: #64748b;
+        }
+
+
+        /* ================= ABOUT ================= */
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text p {
+            color: #94a3b8;
+            margin-bottom: 20px;
+            font-size: 17px;
+        }
+
+        .about-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .info-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .info-box h3 {
+            color: #38bdf8;
+            margin-bottom: 5px;
+        }
+
+        .info-box p {
+            color: #94a3b8;
+        }
+
+
+        /* ================= SKILLS ================= */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-7px);
+            border-color: #38bdf8;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-card h3 {
+            color: #38bdf8;
+            margin-bottom: 12px;
+        }
+
+        .skill-card p {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+
+        /* ================= DSA ================= */
+
+        .dsa-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .dsa-card {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .dsa-card h3 {
+            color: #38bdf8;
+            margin-bottom: 15px;
+            font-size: 23px;
+        }
+
+        .dsa-card p {
+            color: #94a3b8;
+            margin-bottom: 15px;
+        }
+
+        .topic-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .topic {
+            padding: 7px 12px;
+            border-radius: 20px;
+            background: #1e293b;
+            color: #cbd5e1;
+            font-size: 13px;
+        }
+
+
+        /* ================= AI ================= */
+
+        .ai-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .ai-card {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .ai-card:hover {
+            transform: translateY(-7px);
+            border-color: #38bdf8;
+        }
+
+        .ai-card h3 {
+            color: #38bdf8;
+            margin-bottom: 12px;
+        }
+
+        .ai-card p {
+            color: #94a3b8;
+        }
+
+
+        /* ================= PROJECTS ================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            border-color: #38bdf8;
+        }
+
+        .project-number {
+            color: #38bdf8;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .project-card h3 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .project-card p {
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .project-tech span {
+            background: #1e293b;
+            color: #cbd5e1;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .project-link {
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+
+        /* ================= ROADMAP ================= */
+
+        .roadmap {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .roadmap-item {
+            padding: 25px 30px;
+            margin-bottom: 20px;
+
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-left: 4px solid #38bdf8;
+
+            border-radius: 8px;
+        }
+
+        .roadmap-item h3 {
+            color: #38bdf8;
+        }
+
+        .roadmap-item p {
+            color: #94a3b8;
+        }
+
+
+        /* ================= CONTACT ================= */
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .contact-info,
+        .contact-form {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            padding: 35px;
+            border-radius: 15px;
+        }
+
+        .contact-info h3,
+        .contact-form h3 {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info>p {
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 22px;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 8px;
+
+            background: #1e293b;
+            color: #38bdf8;
+
+            font-weight: bold;
+        }
+
+        .contact-item h4 {
+            color: #cbd5e1;
+            margin-bottom: 2px;
+        }
+
+        .contact-item a {
+            color: #38bdf8;
+            font-size: 14px;
+        }
+
+        .contact-item p {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+
+        /* ================= FORM ================= */
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+
+            background: #020617;
+
+            border: 1px solid #334155;
+
+            color: white;
+
+            padding: 14px;
+
+            border-radius: 7px;
+
+            margin-bottom: 15px;
+
+            outline: none;
+
+            font-size: 14px;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #38bdf8;
+        }
+
+        .input-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .send-btn {
+            border: none;
+
+            padding: 13px 25px;
+
+            border-radius: 7px;
+
+            background: #38bdf8;
+            color: #020617;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .send-btn:hover {
+            background: #0ea5e9;
+            transform: translateY(-2px);
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 1000px) {
+
+            .home-container {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .home-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ai-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 750px) {
+
+            nav {
+                padding: 0 5%;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 80px 5%;
+            }
+
+            .home-content h1 {
+                font-size: 45px;
+            }
+
+            .home-content h2 {
+                font-size: 21px;
+            }
+
+            .profile-container {
+                width: 260px;
+                height: 260px;
+            }
+
+            .about-container,
+            .dsa-container,
+            .projects-grid,
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid,
+            .ai-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-info {
+                grid-template-columns: 1fr;
+            }
+
+            .input-group {
+                grid-template-columns: 1fr;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <div class="logo">
+            Shankar.
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#skills">Skills</a></li>
+
+            <li><a href="#dsa">DSA</a></li>
+
+            <li><a href="#ai">AI / ML</a></li>
+
+            <li><a href="#projects">Projects</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- ================= HOME ================= -->
+
+    <section id="home">
+
+        <div class="home-container">
+
+            <div class="home-content">
+
+                <div class="hello">
+                    Hello, I'm
+                </div>
+
+                <h1>
+                    Shankar <span>G L</span>
+                </h1>
+
+                <h2>
+                    AI/ML Learner & Software Developer
+                </h2>
+
+                <p>
+                    Information Science Engineering student passionate about
+                    Data Structures & Algorithms, Artificial Intelligence,
+                    Machine Learning, Generative AI and building practical
+                    software projects.
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#projects" class="btn primary-btn">
+                        View My Projects
+                    </a>
+
+                    <a href="#contact" class="btn secondary-btn">
+                        Contact Me
+                    </a>
+
+                </div>
+
+                <div class="social-links">
+
+                    <a href="https://github.com/shankargl" target="_blank">
+                        GitHub
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/shankar-g-l2007/" target="_blank">
+                        LinkedIn
+                    </a>
+
+                    <a href="mailto:shankarshankargl2007@gmail.com">
+                        Email
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-container">
+
+                <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Shankar G L">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    About <span>Me</span>
+                </h2>
+
+                <p>
+                    A little about my journey
+                </p>
+
+            </div>
+
+
+            <div class="about-container">
+
+                <div class="about-text">
+
+                    <p>
+                        I'm an Information Science Engineering student with a
+                        strong interest in software development and Artificial
+                        Intelligence.
+                    </p>
+
+                    <p>
+                        I actively practice Data Structures and Algorithms
+                        using Python and C++ and solve problems on LeetCode
+                        to improve my problem-solving and interview skills.
+                    </p>
+
+                    <p>
+                        Alongside DSA, I'm building my knowledge in Machine
+                        Learning, Generative AI, Large Language Models,
+                        Retrieval-Augmented Generation and AI agents.
+                    </p>
+
+                    <p>
+                        My goal is to combine strong software engineering
+                        fundamentals with modern AI technologies to build
+                        useful real-world applications.
+                    </p>
+
+                </div>
+
+
+                <div class="about-info">
+
+                    <div class="info-box">
+                        <h3>Education</h3>
+                        <p>Information Science Engineering</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>Focus</h3>
+                        <p>Software + AI</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>DSA</h3>
+                        <p>Python & C++</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>Interests</h3>
+                        <p>AI / ML / GenAI</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    My <span>Skills</span>
+                </h2>
+
+                <p>
+                    Technologies and concepts I'm learning and working with
+                </p>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <h3>Programming</h3>
+                    <p>
+                        Python, C++, C, HTML and CSS
+                    </p>
+                </div>
+
+
+                <div class="skill-card">
+                    <h3>DSA</h3>
+                    <p>
+                        Arrays, Strings, Hashing, Recursion, Backtracking,
+                        Linked Lists, Stack, Queue, Trees, Graphs,
+                        Binary Search, Sliding Window, DP and Sorting
+                    </p>
+                </div>
+
+
+                <div class="skill-card">
+                    <h3>Web Development</h3>
+                    <p>
+                        HTML, CSS, Flask and FastAPI
+                    </p>
+                </div>
+
+
+                <div class="skill-card">
+                    <h3>Machine Learning</h3>
+                    <p>
+                        NumPy, Pandas, Data Visualization, Statistics,
+                        Probability, Linear Regression, Logistic Regression
+                        and Classification
+                    </p>
+                </div>
+
+
+                <div class="skill-card">
+                    <h3>Generative AI</h3>
+                    <p>
+                        LLMs, Prompt Engineering, Embeddings, Transformers,
+                        RAG, Fine-tuning concepts and AI applications
+                    </p>
+                </div>
+
+
+                <div class="skill-card">
+                    <h3>AI Frameworks</h3>
+                    <p>
+                        LangChain, LangGraph and exploration of
+                        agentic AI systems
+                    </p>
+                </div>
+
+
+                <div class="skill-card">
+                    <h3>Developer Tools</h3>
+                    <p>
+                        Git, GitHub, Streamlit, VS Code and Jupyter Notebook
+                    </p>
+                </div>
+
+
+                <div class="skill-card">
+                    <h3>Learning Next</h3>
+                    <p>
+                        Deep Learning, Cloud, Docker, DevOps,
+                        AWS and advanced AI/ML
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= DSA ================= -->
+
+    <section id="dsa">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    DSA & <span>Problem Solving</span>
+                </h2>
+
+                <p>
+                    Building strong problem-solving fundamentals
+                </p>
+
+            </div>
+
+
+            <div class="dsa-container">
+
+                <div class="dsa-card">
+
+                    <h3>Data Structures</h3>
+
+                    <p>
+                        Practicing core data structures and learning
+                        how to select the right structure for a problem.
+                    </p>
+
+                    <div class="topic-list">
+
+                        <span class="topic">Arrays</span>
+                        <span class="topic">Strings</span>
+                        <span class="topic">Hashing</span>
+                        <span class="topic">Linked List</span>
+                        <span class="topic">Stack</span>
+                        <span class="topic">Queue</span>
+                        <span class="topic">Trees</span>
+                        <span class="topic">Graphs</span>
+                        <span class="topic">Heap</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dsa-card">
+
+                    <h3>Algorithms & Patterns</h3>
+
+                    <p>
+                        Solving algorithmic problems using common
+                        interview patterns and optimization techniques.
+                    </p>
+
+                    <div class="topic-list">
+
+                        <span class="topic">Two Pointers</span>
+                        <span class="topic">Sliding Window</span>
+                        <span class="topic">Binary Search</span>
+                        <span class="topic">Prefix Sum</span>
+                        <span class="topic">Recursion</span>
+                        <span class="topic">Backtracking</span>
+                        <span class="topic">Greedy</span>
+                        <span class="topic">Dynamic Programming</span>
+                        <span class="topic">Sorting</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= AI / ML ================= -->
+
+    <section id="ai">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    AI / ML <span>Journey</span>
+                </h2>
+
+                <p>
+                    Exploring modern Artificial Intelligence
+                </p>
+
+            </div>
+
+
+            <div class="ai-grid">
+
+                <div class="ai-card">
+
+                    <h3>Machine Learning</h3>
+
+                    <p>
+                        Learning supervised and unsupervised learning,
+                        statistics, probability, regression,
+                        classification and model evaluation.
+                    </p>
+
+                </div>
+
+
+                <div class="ai-card">
+
+                    <h3>Generative AI</h3>
+
+                    <p>
+                        Exploring LLMs, prompt engineering, embeddings,
+                        transformers, inference and modern AI applications.
+                    </p>
+
+                </div>
+
+
+                <div class="ai-card">
+
+                    <h3>RAG Systems</h3>
+
+                    <p>
+                        Building applications that combine document
+                        retrieval with LLMs to generate context-aware
+                        responses.
+                    </p>
+
+                </div>
+
+
+                <div class="ai-card">
+
+                    <h3>AI Agents</h3>
+
+                    <p>
+                        Learning tools, memory, workflows and
+                        agentic AI frameworks such as LangChain
+                        and LangGraph.
+                    </p>
+
+                </div>
+
+
+                <div class="ai-card">
+
+                    <h3>LLM Engineering</h3>
+
+                    <p>
+                        Exploring tokenization, embeddings, transformers,
+                        fine-tuning, PEFT, LoRA, QLoRA and LLM applications.
+                    </p>
+
+                </div>
+
+
+                <div class="ai-card">
+
+                    <h3>Future Focus</h3>
+
+                    <p>
+                        Deep Learning, advanced AI systems,
+                        cloud deployment, MLOps and production AI.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    My <span>Projects</span>
+                </h2>
+
+                <p>
+                    Things I have built and explored
+                </p>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+
+                <div class="project-card">
+
+                    <div class="project-number">
+                        PROJECT 01
+                    </div>
+
+                    <h3>
+                        AI Document RAG Application
+                    </h3>
+
+                    <p>
+                        A Retrieval-Augmented Generation application
+                        that allows users to work with documents and
+                        obtain context-aware answers using an AI pipeline.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span>Python</span>
+                        <span>Streamlit</span>
+                        <span>RAG</span>
+                        <span>LLM</span>
+                        <span>Embeddings</span>
+
+                    </div>
+
+                    <a href="https://github.com/shankargl/pdf-rag-chatbot" target="_blank" class="project-link">
+                        View Project →
+                    </a>
+
+                </div>
+
+
+
+                <div class="project-card">
+
+                    <div class="project-number">
+                        PROJECT 02
+                    </div>
+
+                    <h3>
+                        AI Interview Assistant
+                    </h3>
+
+                    <p>
+                        An AI-powered interview assistant designed
+                        to help users prepare for technical interviews
+                        through AI-generated questions, explanations
+                        and feedback.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span>Python</span>
+                        <span>AI</span>
+                        <span>LangChain</span>
+                        <span>SQLite</span>
+
+                    </div>
+
+                    <a href="https://github.com/shankargl/AI-MOCK-INTERVIEW-FRIEND" target="_blank"
+                        class="project-link">
+                        GitHub →
+                    </a>
+
+                </div>
+
+
+
+                <div class="project-card">
+
+                    <div class="project-number">
+                        PROJECT 03
+                    </div>
+
+                    <h3>
+                        Machine Learning Practice
+                    </h3>
+
+                    <p>
+                        Hands-on machine learning work covering
+                        data analysis, regression, classification,
+                        performance metrics and model development.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span>Python</span>
+                        <span>NumPy</span>
+                        <span>Pandas</span>
+                        <span>Scikit-learn</span>
+
+                    </div>
+
+                    <a href="https://github.com/shankargl/machin_learning_practices" target="_blank"
+                        class="project-link">
+                        GitHub →
+                    </a>
+
+                </div>
+
+
+
+                <div class="project-card">
+
+                    <div class="project-number">
+                        PROJECT 04
+                    </div>
+
+                    <h3>
+                        DSA & LeetCode Practice
+                    </h3>
+
+                    <p>
+                        A collection of algorithmic problem-solving
+                        work covering data structures, algorithmic
+                        patterns, recursion, backtracking and
+                        dynamic programming.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span>Python</span>
+                        <span>C++</span>
+                        <span>DSA</span>
+                        <span>LeetCode</span>
+
+                    </div>
+
+                    <a href="https://github.com/shankargl" target="_blank" class="project-link">
+                        GitHub →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ROADMAP ================= -->
+
+    <section id="roadmap">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    My <span>Learning Roadmap</span>
+                </h2>
+
+                <p>
+                    Continuously expanding my technical skills
+                </p>
+
+            </div>
+
+
+            <div class="roadmap">
+
+
+                <div class="roadmap-item">
+
+                    <h3>
+                        01 — Strong DSA Foundation
+                    </h3>
+
+                    <p>
+                        Mastering problem-solving patterns, data structures,
+                        algorithms and interview-oriented coding.
+                    </p>
+
+                </div>
+
+
+                <div class="roadmap-item">
+
+                    <h3>
+                        02 — Full Stack Development
+                    </h3>
+
+                    <p>
+                        Building applications using JavaScript, React,
+                        Node.js, Express.js and MongoDB.
+                    </p>
+
+                </div>
+
+
+                <div class="roadmap-item">
+
+                    <h3>
+                        03 — Machine Learning
+                    </h3>
+
+                    <p>
+                        Developing deeper knowledge of ML algorithms,
+                        mathematics, statistics and model evaluation.
+                    </p>
+
+                </div>
+
+
+                <div class="roadmap-item">
+
+                    <h3>
+                        04 — Generative AI
+                    </h3>
+
+                    <p>
+                        Learning LLMs, RAG, prompt engineering,
+                        fine-tuning and embeddings.
+                    </p>
+
+                </div>
+
+
+                <div class="roadmap-item">
+
+                    <h3>
+                        05 — Agentic AI
+                    </h3>
+
+                    <p>
+                        Building AI agents and workflows using tools,
+                        memory, LangChain and LangGraph.
+                    </p>
+
+                </div>
+
+
+                <div class="roadmap-item">
+
+                    <h3>
+                        06 — Cloud & Production AI
+                    </h3>
+
+                    <p>
+                        Exploring Docker, CI/CD, AWS, deployment,
+                        MLOps and production-ready AI systems.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    Get In <span>Touch</span>
+                </h2>
+
+                <p>
+                    Have a project, idea, or opportunity?
+                    Feel free to connect with me.
+                </p>
+
+            </div>
+
+
+            <div class="contact-wrapper">
+
+
+                <!-- CONTACT INFORMATION -->
+
+                <div class="contact-info">
+
+                    <h3>
+                        Let's Connect
+                    </h3>
+
+                    <p>
+                        I'm interested in software development,
+                        Artificial Intelligence, Machine Learning,
+                        Generative AI and technical collaborations.
+                    </p>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            ✉
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Email
+                            </h4>
+
+                            <a href="mailto:shankarshankargl2007@gmail.com">
+                                shankarshankargl2007@gmail.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            GH
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                GitHub
+                            </h4>
+
+                            <a href="https://github.com/shankargl" target="_blank">
+                                github.com/shankargl
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            in
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                LinkedIn
+                            </h4>
+
+                            <a href="https://www.linkedin.com/in/shankar-g-l2007/" target="_blank">
+                                LinkedIn Profile
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            IN
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Location
+                            </h4>
+
+                            <p>
+                                Karnataka, India
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CONTACT FORM -->
+
+                <div class="contact-form">
+
+                    <h3>
+                        Send Me a Message
+                    </h3>
+
+
+                    <!-- IMPORTANT:
+                     This sends data to Flask -->
+
+                    <form action="/send-message" method="POST">
+
+
+                        <div class="input-group">
+
+                            <input type="text" name="name" placeholder="Your Name" required>
+
+
+                            <input type="email" name="email" placeholder="Your Email" required>
+
+                        </div>
+
+
+                        <input type="text" name="subject" placeholder="Subject" required>
+
+
+                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+
+
+                        <button type="submit" class="send-btn">
+
+                            Send Message →
+
+                        </button>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Shankar G L. Built with HTML, CSS & Flask.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+```
