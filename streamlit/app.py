@@ -59,7 +59,7 @@ st.area_chart(data) #display area chart
 st.bar_chart(data) #display bar chart   
 
 
-#with sidebar
+#with sidebar/
 with st.sidebar:
     st.write("hello my dear shankar") 
     file_uploader=st.file_uploader("enter a pdf file",type=["pdf","txt"]   )
