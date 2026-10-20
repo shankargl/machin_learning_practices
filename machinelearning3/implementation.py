@@ -13,6 +13,7 @@ w = 0
 b = 0
 
 learning_rate = 0.1
+
 epochs = 1000
 
 n = len(X)
