@@ -1,0 +1,11 @@
+Name,Age,Department,Salary,Years_Experience,Promotion_Eligibility
+John,28,HR,50000,3,No
+Sophia,35,Finance,80000,10,Yes
+Amit,30,IT,60000,,No
+Emma,45,Marketing,90000,20,Yes
+Liam,40,IT,75000,15,No
+Olivia,,Finance,120000,25,Yes
+Noah,32,HR,65000,5,No
+Ava,38,Marketing,85000,12,Yes
+Ravi,29,IT,350000,2,No
+Meera,50,Finance,8000,28,Yes
